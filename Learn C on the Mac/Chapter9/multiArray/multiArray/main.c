@@ -2,11 +2,16 @@
 //  main.c
 //  multiArray
 //
+<<<<<<< HEAD
 //  Created by Adam Chamberlin on 06/11/2011.
+=======
+//  Created by Adam Chamberlin on 30/10/2011.
+>>>>>>> 7e725d507ebac6220ef283efa32f2533bbf44a53
 //  Copyright (c) 2011 Stour Valley Designs. All rights reserved.
 //
 
 #include <stdio.h>
+<<<<<<< HEAD
 #include <string.h>
 
 #define kMaxDVDs 4
@@ -78,4 +83,34 @@ int PrintDVDTitle(int dvdNum, char title[][kMaxTitleLength]) {
 void ReplaceReturnAtEndOfString(char *theString) {
     int length = (int)strlen(theString);
     theString[length - 1] = '\0';
+=======
+
+#define kMaxDVDs 4
+#define kMaxTitleLength 256
+
+void PrintDVDTitle(int dvdNum, char title[][kMaxTitleLength]);
+
+int main (int argc, const char * argv[]) {
+	char title[kMaxDVDs][kMaxTitleLength];
+	short dvdNum;
+	
+	printf("The title array takes up %ld bytes of memory.\n\n", sizeof(title));
+	
+	for(dvdNum = 0; dvdNum < kMaxDVDs; dvdNum++) {
+		printf("Title of DVD #%d: ", dvdNum + 1);
+		fgets(title[dvdNum], kMaxTitleLength, stdin);
+	}
+	
+	printf("----\n");
+	
+	for(dvdNum = 0; dvdNum < kMaxDVDs; dvdNum++) {
+		PrintDVDTitle(dvdNum, title);
+    }
+	
+	return 0;
+}		
+
+void PrintDVDTitle(int dvdNum, char title[][kMaxTitleLength]) {
+	printf("Title of DVD #%d: %s\n", dvdNum + 1, title[dvdNum]);
+>>>>>>> 7e725d507ebac6220ef283efa32f2533bbf44a53
 }
