@@ -8,11 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-typedef enum {
-    kCircle,
-    kRectangle,
-    kOblateSpheroid
-} ShapeType;
+#pragma Structures
 
 typedef enum {
     kRedColour,
@@ -24,17 +20,11 @@ typedef struct {
     int x, y, width, height;
 } ShapeRect;
 
-typedef struct {
-    ShapeType type;
-    ShapeColour fillColour;
-    ShapeRect bounds;
-} Shape;
+
+#pragma Function Prototypes
 
 NSString *colourName(ShapeColour colourName);
-void drawCircle(ShapeRect bounds, ShapeColour fillColour);
-void drawRectangle(ShapeRect bounds, ShapeColour fillColour);
-void drawEgg(ShapeRect bounds, ShapeColour fillColour);
-void drawShapes(Shape shapes[], int count);
+void drawShapes(id shapes[], int count);
 
 NSString *colourName(ShapeColour colourName) {
     switch (colourName) {
@@ -51,54 +41,130 @@ NSString *colourName(ShapeColour colourName) {
     return @"no clue";
 }
 
-void drawCircle(ShapeRect bounds, ShapeColour fillColour) {
+
+#pragma Mark Circle class
+
+@interface Circle : NSObject {
+@private
+    ShapeColour fillColour;
+    ShapeRect bounds;
+}
+
+-(void) setFillColour: (ShapeColour) fillColour;
+-(void) setBounds: (ShapeRect) bounds;
+-(void) draw; 
+@end
+
+@implementation Circle
+
+-(void) setFillColour:(ShapeColour) c
+{
+    fillColour = c;
+}
+
+-(void) setBounds:(ShapeRect) b
+{
+    bounds = b;
+}
+
+-(void) draw
+{
     NSLog(@"drawing a circle at (%d %d %d %d) in %@", bounds.x, bounds.y, bounds.height, bounds.width, colourName(fillColour));
 }
 
-void drawRectangle(ShapeRect bounds, ShapeColour fillColour) {
+@end
+
+
+#pragma Rectangle Class
+
+@interface Rectangle : NSObject {
+@private
+    ShapeColour fillColour;
+    ShapeRect bounds;
+}
+-(void) setFillColour: (ShapeColour) fillColour;
+-(void) setBounds: (ShapeRect) bounds;
+-(void) draw;
+@end
+
+@implementation Rectangle
+
+-(void) setFillColour:(ShapeColour) c
+{
+    fillColour = c;
+}
+
+-(void) setBounds:(ShapeRect) b
+{
+    bounds = b;
+}
+
+-(void) draw
+{
     NSLog(@"drawing a rectangle at (%d %d %d %d) in %@", bounds.x, bounds.y, bounds.height, bounds.width, colourName(fillColour));
 }
 
-void drawEgg(ShapeRect bounds, ShapeColour fillColour) {
+@end
+
+
+#pragma OblateSphereoid Class
+
+@interface OblateSphereoid : NSObject {
+@private
+    ShapeColour fillColour;
+    ShapeRect bounds;
+}
+-(void) setFillColour: (ShapeColour) fillColour;
+-(void) setBounds: (ShapeRect) bounds;
+-(void) draw;
+@end
+
+@implementation OblateSphereoid
+
+-(void) setFillColour:(ShapeColour) c
+{
+    fillColour = c;
+}
+
+-(void) setBounds:(ShapeRect) b
+{
+    bounds = b;
+}
+
+-(void) draw
+{
     NSLog(@"drawing an egg at (%d %d %d %d) in %@", bounds.x, bounds.y, bounds.height, bounds.width, colourName(fillColour));
 }
 
-void drawShapes(Shape shapes[], int count) {
+@end
+
+void drawShapes(id shapes[], int count) {
     int i;
     
     for (i = 0; i < count; i++) {
-        switch (shapes[i].type) {
-            case kCircle:
-                drawCircle(shapes[i].bounds, shapes[i].fillColour);
-                break;
-            case kRectangle:
-                drawRectangle(shapes[i].bounds, shapes[i].fillColour);
-                break;
-            case kOblateSpheroid:
-                drawEgg(shapes[i].bounds, shapes[i].fillColour);
-                break;
-        }
+        id shape = shapes[i];
+        [shape draw];
     }
 }
 
 int main (int argc, const char * argv[])
 {
-    Shape shapes[3];
+    id shapes[3];
     
     ShapeRect rect0 = { 0, 0, 10, 30 };
-	shapes[0].type = kCircle;
-	shapes[0].fillColour = kRedColour;
-	shapes[0].bounds = rect0;
+	shapes[0] = [Circle new];
+	[shapes[0] setBounds: rect0];
+	[shapes[0] setFillColour: kRedColour];
 	
 	ShapeRect rect1 = { 30, 40, 50, 60 };
-	shapes[1].type = kRectangle;
-	shapes[1].fillColour = kGreenColour;
-	shapes[1].bounds = rect1;
+	shapes[1] = [Rectangle new];
+	[shapes[1] setBounds: rect1];
+	[shapes[1] setFillColour: kGreenColour];
 	
-	ShapeRect rect2 = { 15, 18, 37, 29 };
-	shapes[2].type = kOblateSpheroid;
-	shapes[2].fillColour = kBlueColour;
-	shapes[2].bounds = rect2;
+	ShapeRect rect2 = { 15, 19, 37, 29 };
+	shapes[2] = [OblateSphereoid new];
+	[shapes[2] setBounds: rect2];
+	[shapes[2] setFillColour: kBlueColour];
 	
 	drawShapes (shapes, 3);
     
