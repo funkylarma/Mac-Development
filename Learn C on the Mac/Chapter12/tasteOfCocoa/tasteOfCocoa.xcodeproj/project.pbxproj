@@ -1,0 +1,296 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		66FFAC4D1470051E002D5D5B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66FFAC4C1470051E002D5D5B /* Cocoa.framework */; };
+		66FFAC571470051E002D5D5B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 66FFAC551470051E002D5D5B /* InfoPlist.strings */; };
+		66FFAC591470051E002D5D5B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 66FFAC581470051E002D5D5B /* main.m */; };
+		66FFAC5D1470051E002D5D5B /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 66FFAC5B1470051E002D5D5B /* Credits.rtf */; };
+		66FFAC601470051E002D5D5B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 66FFAC5F1470051E002D5D5B /* AppDelegate.m */; };
+		66FFAC631470051E002D5D5B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66FFAC611470051E002D5D5B /* MainMenu.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		66FFAC481470051E002D5D5B /* tasteOfCocoa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tasteOfCocoa.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		66FFAC4C1470051E002D5D5B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		66FFAC4F1470051E002D5D5B /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		66FFAC501470051E002D5D5B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		66FFAC511470051E002D5D5B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		66FFAC541470051E002D5D5B /* tasteOfCocoa-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "tasteOfCocoa-Info.plist"; sourceTree = "<group>"; };
+		66FFAC561470051E002D5D5B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		66FFAC581470051E002D5D5B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		66FFAC5A1470051E002D5D5B /* tasteOfCocoa-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "tasteOfCocoa-Prefix.pch"; sourceTree = "<group>"; };
+		66FFAC5C1470051E002D5D5B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		66FFAC5E1470051E002D5D5B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		66FFAC5F1470051E002D5D5B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		66FFAC621470051E002D5D5B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		66FFAC451470051E002D5D5B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66FFAC4D1470051E002D5D5B /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		66FFAC3D1470051D002D5D5B = {
+			isa = PBXGroup;
+			children = (
+				66FFAC521470051E002D5D5B /* tasteOfCocoa */,
+				66FFAC4B1470051E002D5D5B /* Frameworks */,
+				66FFAC491470051E002D5D5B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		66FFAC491470051E002D5D5B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				66FFAC481470051E002D5D5B /* tasteOfCocoa.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		66FFAC4B1470051E002D5D5B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				66FFAC4C1470051E002D5D5B /* Cocoa.framework */,
+				66FFAC4E1470051E002D5D5B /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		66FFAC4E1470051E002D5D5B /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				66FFAC4F1470051E002D5D5B /* AppKit.framework */,
+				66FFAC501470051E002D5D5B /* CoreData.framework */,
+				66FFAC511470051E002D5D5B /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		66FFAC521470051E002D5D5B /* tasteOfCocoa */ = {
+			isa = PBXGroup;
+			children = (
+				66FFAC5E1470051E002D5D5B /* AppDelegate.h */,
+				66FFAC5F1470051E002D5D5B /* AppDelegate.m */,
+				66FFAC611470051E002D5D5B /* MainMenu.xib */,
+				66FFAC531470051E002D5D5B /* Supporting Files */,
+			);
+			path = tasteOfCocoa;
+			sourceTree = "<group>";
+		};
+		66FFAC531470051E002D5D5B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				66FFAC541470051E002D5D5B /* tasteOfCocoa-Info.plist */,
+				66FFAC551470051E002D5D5B /* InfoPlist.strings */,
+				66FFAC581470051E002D5D5B /* main.m */,
+				66FFAC5A1470051E002D5D5B /* tasteOfCocoa-Prefix.pch */,
+				66FFAC5B1470051E002D5D5B /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		66FFAC471470051E002D5D5B /* tasteOfCocoa */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66FFAC661470051E002D5D5B /* Build configuration list for PBXNativeTarget "tasteOfCocoa" */;
+			buildPhases = (
+				66FFAC441470051E002D5D5B /* Sources */,
+				66FFAC451470051E002D5D5B /* Frameworks */,
+				66FFAC461470051E002D5D5B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = tasteOfCocoa;
+			productName = tasteOfCocoa;
+			productReference = 66FFAC481470051E002D5D5B /* tasteOfCocoa.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		66FFAC3F1470051D002D5D5B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = "Stour Valley Designs";
+			};
+			buildConfigurationList = 66FFAC421470051D002D5D5B /* Build configuration list for PBXProject "tasteOfCocoa" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 66FFAC3D1470051D002D5D5B;
+			productRefGroup = 66FFAC491470051E002D5D5B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				66FFAC471470051E002D5D5B /* tasteOfCocoa */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		66FFAC461470051E002D5D5B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66FFAC571470051E002D5D5B /* InfoPlist.strings in Resources */,
+				66FFAC5D1470051E002D5D5B /* Credits.rtf in Resources */,
+				66FFAC631470051E002D5D5B /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		66FFAC441470051E002D5D5B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66FFAC591470051E002D5D5B /* main.m in Sources */,
+				66FFAC601470051E002D5D5B /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		66FFAC551470051E002D5D5B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				66FFAC561470051E002D5D5B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		66FFAC5B1470051E002D5D5B /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				66FFAC5C1470051E002D5D5B /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		66FFAC611470051E002D5D5B /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				66FFAC621470051E002D5D5B /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		66FFAC641470051E002D5D5B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		66FFAC651470051E002D5D5B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		66FFAC671470051E002D5D5B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "tasteOfCocoa/tasteOfCocoa-Prefix.pch";
+				INFOPLIST_FILE = "tasteOfCocoa/tasteOfCocoa-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		66FFAC681470051E002D5D5B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "tasteOfCocoa/tasteOfCocoa-Prefix.pch";
+				INFOPLIST_FILE = "tasteOfCocoa/tasteOfCocoa-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		66FFAC421470051D002D5D5B /* Build configuration list for PBXProject "tasteOfCocoa" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66FFAC641470051E002D5D5B /* Debug */,
+				66FFAC651470051E002D5D5B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		66FFAC661470051E002D5D5B /* Build configuration list for PBXNativeTarget "tasteOfCocoa" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66FFAC671470051E002D5D5B /* Debug */,
+				66FFAC681470051E002D5D5B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 66FFAC3F1470051D002D5D5B /* Project object */;
+}
