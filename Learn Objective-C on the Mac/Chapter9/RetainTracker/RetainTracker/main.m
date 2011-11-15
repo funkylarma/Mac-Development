@@ -34,28 +34,18 @@
 int main (int argc, const char * argv[])
 {
     
-    RetainTracker *tracker = [RetainTracker new]; //count 1
+    NSAutoreleasePool *pool;
+    pool = [[NSAutoreleasePool alloc] init];
+    
+    RetainTracker *tracker;
+    tracker = [RetainTracker new]; //count: 1
     
     [tracker retain]; //count: 2
-    NSLog (@"%lu", [tracker retainCount]);
-	
-    [tracker retain]; //count: 3
-    NSLog (@"%lu", [tracker retainCount]);
-	
-    [tracker release]; //count: 2
-    NSLog (@"%lu", [tracker retainCount]);
-	
+    [tracker autorelease]; //count: still 2
     [tracker release]; //count: 1
-    NSLog (@"%lu", [tracker retainCount]);
-	
-    [tracker retain]; //count 2
-    NSLog (@"%lu", [tracker retainCount]);
-	
-    [tracker release]; //count 1
-    NSLog (@"%lu", [tracker retainCount]);
-	
-    [tracker release]; //count: 0, dealloc it
+    
+    NSLog(@"releasing the pool");
+    [pool release];
     
     return 0;
 }
-
