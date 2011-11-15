@@ -40,6 +40,37 @@
 @end
 
 
+#pragma Mark Slant6 engine class
+
+@interface Slant6 : Engine {
+}
+@end
+
+@implementation Slant6
+
+- (NSString *) description
+{
+    return (@"I am a slant-6. Vroom!");
+}
+
+@end
+
+
+#pragma Mark AllWeatherRadial tire class
+
+@interface AllWeatherRadial : Tire {
+}
+@end
+
+@implementation AllWeatherRadial
+
+- (NSString *) description {
+    return (@"I am a tire for rain or shine.");
+}
+
+@end
+
+
 #pragma Mark Car class
 
 @interface Car : NSObject {
@@ -100,13 +131,13 @@ int main (int argc, const char * argv[])
 {
     Car *car = [Car new];
     
-    Engine *engine = [Engine new];
+    Engine *engine = [Slant6 new];
     
     [car setEngine: engine];
     
     int i;
     for (i = 0; i < 4; i++) {
-        Tire *tire = [Tire new];
+        Tire *tire = [AllWeatherRadial new];
         
         [car setTire: tire atIndex: i];
     }
