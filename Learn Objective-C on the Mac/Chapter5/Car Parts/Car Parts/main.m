@@ -46,24 +46,47 @@
     Engine *engine;
     Tire *tires[4];
 }
+- (Engine *) engine;
+- (void) setEngine: (Engine *) newEngine;
+- (Tire *) tireAtIndex: (int) index;
+- (void) setTire: (Tire *) tire
+         atIndex: (int) index;
 - (void) print;
 @end
 
 @implementation Car
 
-- (id) init
+- (Engine *) engine
 {
-    if (self = [super init]) {
-        engine = [Engine new];
-        tires[0] = [Tire new];
-        tires[1] = [Tire new];
-        tires[2] = [Tire new];
-        tires[3] = [Tire new];
-    }
-    return (self);
+    return engine;
 }
 
-- (void) print {
+- (void) setEngine:(Engine *)newEngine
+{
+    engine = newEngine;
+}
+
+- (Tire *) tireAtIndex:(int)index
+{
+    if (index < 0 || index > 3) {
+        NSLog(@"bad index (%d) in tireAtIndex:", index);
+        exit(1);
+    }
+    
+    return (tires[index]);
+}
+
+- (void) setTire:(Tire *)tire atIndex:(int)index
+{
+    if (index < 0 || index > 3) {
+        NSLog(@"bad index (%d) in setTire:atIndex:", index);
+        exit(1);
+    }
+    tires[index] = tire;
+}
+
+- (void) print
+{
     NSLog(@"%@", engine);
     NSLog(@"%@", tires[0]);
     NSLog(@"%@", tires[1]);
@@ -75,9 +98,19 @@
 
 int main (int argc, const char * argv[])
 {
-    Car *car;
+    Car *car = [Car new];
     
-    car = [Car new];
+    Engine *engine = [Engine new];
+    
+    [car setEngine: engine];
+    
+    int i;
+    for (i = 0; i < 4; i++) {
+        Tire *tire = [Tire new];
+        
+        [car setTire: tire atIndex: i];
+    }
+    
     [car print];
     
     return 0;
