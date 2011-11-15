@@ -22,11 +22,8 @@ int main (int argc, const char * argv[])
     
     int i;
     for (i = 0; i < 4; i++) {
-        Tire *tire;
-        tire = [[Tire alloc] init];
-        
-        [tire setPressure: 23 + i];
-        [tire setTreadDepth: 33 - i];
+        AllWeatherRadial *tire;
+        tire = [[AllWeatherRadial alloc] init];
         
         [car setTire: tire atIndex: i];
         
