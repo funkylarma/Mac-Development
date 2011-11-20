@@ -1,0 +1,241 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		66080360147943A200648F1A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6608035F147943A200648F1A /* Foundation.framework */; };
+		66080363147943A200648F1A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 66080362147943A200648F1A /* main.m */; };
+		66080367147943A200648F1A /* ITunesFinder.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 66080366147943A200648F1A /* ITunesFinder.1 */; };
+		6608036F147943CE00648F1A /* ITunesFinder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6608036E147943CE00648F1A /* ITunesFinder.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		66080359147943A200648F1A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				66080367147943A200648F1A /* ITunesFinder.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		6608035B147943A200648F1A /* ITunesFinder */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ITunesFinder; sourceTree = BUILT_PRODUCTS_DIR; };
+		6608035F147943A200648F1A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		66080362147943A200648F1A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		66080365147943A200648F1A /* ITunesFinder-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ITunesFinder-Prefix.pch"; sourceTree = "<group>"; };
+		66080366147943A200648F1A /* ITunesFinder.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = ITunesFinder.1; sourceTree = "<group>"; };
+		6608036D147943CE00648F1A /* ITunesFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITunesFinder.h; sourceTree = "<group>"; };
+		6608036E147943CE00648F1A /* ITunesFinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITunesFinder.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		66080358147943A200648F1A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66080360147943A200648F1A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		66080350147943A200648F1A = {
+			isa = PBXGroup;
+			children = (
+				6608036D147943CE00648F1A /* ITunesFinder.h */,
+				6608036E147943CE00648F1A /* ITunesFinder.m */,
+				66080361147943A200648F1A /* ITunesFinder */,
+				6608035E147943A200648F1A /* Frameworks */,
+				6608035C147943A200648F1A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6608035C147943A200648F1A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6608035B147943A200648F1A /* ITunesFinder */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6608035E147943A200648F1A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6608035F147943A200648F1A /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		66080361147943A200648F1A /* ITunesFinder */ = {
+			isa = PBXGroup;
+			children = (
+				66080362147943A200648F1A /* main.m */,
+				66080366147943A200648F1A /* ITunesFinder.1 */,
+				66080364147943A200648F1A /* Supporting Files */,
+			);
+			path = ITunesFinder;
+			sourceTree = "<group>";
+		};
+		66080364147943A200648F1A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				66080365147943A200648F1A /* ITunesFinder-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6608035A147943A200648F1A /* ITunesFinder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6608036A147943A200648F1A /* Build configuration list for PBXNativeTarget "ITunesFinder" */;
+			buildPhases = (
+				66080357147943A200648F1A /* Sources */,
+				66080358147943A200648F1A /* Frameworks */,
+				66080359147943A200648F1A /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ITunesFinder;
+			productName = ITunesFinder;
+			productReference = 6608035B147943A200648F1A /* ITunesFinder */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		66080352147943A200648F1A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = "Stour Valley Designs";
+			};
+			buildConfigurationList = 66080355147943A200648F1A /* Build configuration list for PBXProject "ITunesFinder" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 66080350147943A200648F1A;
+			productRefGroup = 6608035C147943A200648F1A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6608035A147943A200648F1A /* ITunesFinder */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		66080357147943A200648F1A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66080363147943A200648F1A /* main.m in Sources */,
+				6608036F147943CE00648F1A /* ITunesFinder.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		66080368147943A200648F1A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		66080369147943A200648F1A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		6608036B147943A200648F1A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ITunesFinder/ITunesFinder-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		6608036C147943A200648F1A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ITunesFinder/ITunesFinder-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		66080355147943A200648F1A /* Build configuration list for PBXProject "ITunesFinder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66080368147943A200648F1A /* Debug */,
+				66080369147943A200648F1A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6608036A147943A200648F1A /* Build configuration list for PBXNativeTarget "ITunesFinder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6608036B147943A200648F1A /* Debug */,
+				6608036C147943A200648F1A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 66080352147943A200648F1A /* Project object */;
+}
