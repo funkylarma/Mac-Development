@@ -68,6 +68,14 @@
     [super dealloc];
 }
 
+- (void) setNilValueForKey:(NSString *)key {
+    if ([key isEqualToString:@"mileage"]) {
+        mileage = 0;
+    } else {
+        [super setNilValueForKey:key];
+    }
+}
+
 - (Tire *) tireAtIndex:(int)index
 {
     Tire *tire;

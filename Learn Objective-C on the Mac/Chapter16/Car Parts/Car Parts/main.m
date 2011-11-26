@@ -7,59 +7,114 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Engine.h"
-#import "Tire.h"
 #import "Car.h"
+#import "Engine.h"
+#import "Garage.h"
 #import "Slant6.h"
-#import "AllWeatherRadial.h"
+#import "Tire.h"
+
+Car *makeCar(NSString *name, NSString *make, NSString *model, int modelYear, int numberOfDoors, float mileage, int horsepower) {
+    Car *car = [[[Car alloc] init] autorelease];
+
+    car.name = name;
+    car.make = make;
+    car.model = model;
+    car.modelYear = modelYear;
+    car.numberOfDoors = numberOfDoors;
+    car.mileage = mileage;
+    
+    Slant6 *engine = [[[Slant6 alloc] init] autorelease];
+    [engine setValue:[NSNumber numberWithInt:horsepower] forKey:@"horsePower"];
+    car.engine = engine;
+    
+    for (int i = 0; i < 4; i++) {
+        Tire *tire = [[[Tire alloc] init] autorelease];
+        [car setTire:tire atIndex:i];
+    }
+    
+    return car;
+}
 
 int main (int argc, const char * argv[])
 {
     NSAutoreleasePool *pool;
 	pool = [[NSAutoreleasePool alloc] init];
 	
-	Car *car = [[[Car alloc] init] autorelease];
-	car.name = @"Herbie";
-	car.make = @"Honda";
-	car.model = @"CRX";
-	car.modelYear = 1984;
-	car.numberOfDoors = 2;
-	car.mileage = 110000;
+	Garage *garage = [[Garage alloc] init];
+	garage.name = @"Joe's Garage";
 	
-	int i;
-	for (i = 0; i < 4; i++) {
-		AllWeatherRadial *tire;
-		
-		tire = [[AllWeatherRadial alloc] init];
-		
-		[car setTire: tire
-			 atIndex: i];
-		
-		[tire release];
-	}
+	Car *car;
+	car = makeCar (@"Herbie", @"Honda", @"CRX", 1984, 2, 110000, 58);
+	[garage addCar: car];
 	
-	Slant6 *engine = [[[Slant6 alloc] init] autorelease];
-	car.engine = engine;
+	car = makeCar (@"Badger", @"Acura", @"Integra", 1987, 5, 217036.7, 130);
+	[garage addCar: car];
 	
-	NSLog(@"Car is %@", car);
+	car = makeCar (@"Elvis", @"Acura", @"Legend", 1989, 4, 28123.4, 151);
+	[garage addCar: car];
+	
+	car = makeCar (@"Phoenix", @"Pontiac", @"Firebird", 1969, 2, 85128.3, 345);
+	[garage addCar: car];
+	
+	car = makeCar (@"Streaker", @"Pontiac", @"Silver Streak", 1950, 2, 39100.0, 36);
+	[garage addCar: car];
+	
+	car = makeCar (@"Judge", @"Pontiac", @"GTO", 1969, 2, 45132.2, 370);
+	[garage addCar: car];
+	
+	car = makeCar (@"Paper Car", @"Plymouth", @"Valiant", 1965, 2, 76800, 105);
+	[garage addCar: car];
+	
+	[garage print];
     
-    NSString *name = [car valueForKey:@"name"];
-    NSLog(@"%@", name);
-    NSLog(@"make is %@", [car valueForKey:@"make"]);
-    NSLog(@"model year is %@", [car valueForKey:@"modelYear"]);
+    NSNumber *count;
+    count = [garage valueForKeyPath:@"cars.@count"];
+    NSLog(@"We have %@ cars", count);
     
-    [car setValue:@"Harold" forKey:@"name"];
-    NSLog(@"new car name is %@", [car name]);
+    NSNumber *sum;
+    sum = [garage valueForKeyPath:@"cars.@sum.mileage"];
+    NSLog(@"We have a grand total pf %@ miles", sum);
     
-    [car setValue:[NSNumber numberWithFloat:25062.4] forKey:@"mileage"];
-    NSLog(@"new mileage is %.1f", [car mileage]);
+    NSNumber *avgMileage;
+    avgMileage = [garage valueForKeyPath:@"cars.@avg.mileage"];
+    NSLog(@"average is %.2f", [avgMileage floatValue]);
     
-    [car setValue:[NSNumber numberWithInt:155] forKeyPath:@"engine.horsePower"];
-    NSLog(@"horsepower is %@", [car valueForKeyPath:@"engine.horsePower"]);
+    NSNumber *min, *max;
+    min = [garage valueForKeyPath:@"cars.@min.mileage"];
+    max = [garage valueForKeyPath:@"cars.@max.mileage"];
+    NSLog(@"min/max: %@ / %@", min, max);
     
-    NSArray *pressures = [car valueForKeyPath:@"tires.pressure"];
-    NSLog(@"pressures %@", pressures);
+    NSArray *manufacturers;
+    manufacturers = [garage valueForKeyPath:@"cars.@distinctUnionOfObjects.make"];
+    NSLog(@"makers %@", manufacturers);
     
+    car = [[garage valueForKeyPath:@"cars"] lastObject];
+    NSArray *keys = [NSArray arrayWithObjects:@"make", @"model", @"modelYear", nil];
+    NSDictionary *carValues = [car dictionaryWithValuesForKeys:keys];
+    NSLog(@"Car values: %@", carValues);
+    
+    NSDictionary *newValues = [NSDictionary dictionaryWithObjectsAndKeys:@"Chevy", @"make", @"Nova", @"model", [NSNumber numberWithInt:1964], @"modelYear", nil];
+    [car setValuesForKeysWithDictionary:newValues];
+    NSLog(@"car with new values is %@", car);
+    
+    [car setValue: nil forKey:@"mileage"];
+    NSLog(@"Nil miles are %@", car.mileage);
+    
+    [garage setValue:@"bunny" forKey:@"fluffy"];
+	[garage setValue:@"greeble" forKey:@"bork"];
+	[garage setValue:[NSNull null] forKey:@"snorgle"];
+	[garage setValue:nil forKey:@"gronk"];
+	
+	NSLog(@"values are %@ %@ %@ and %@",
+		   [garage valueForKey:@"fluffy"],
+		   [garage valueForKey:@"bork"],
+		   [garage valueForKey:@"snorgle"],
+   		   [garage valueForKey:@"gronk"]);
+	
+	NSLog(@"%@", [garage valueForKey:@"stuff"]);
+	
+	[garage release];
+	
 	[pool release];
 	
 	return (0);

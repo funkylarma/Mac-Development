@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		664DAB461479945F00C669D5 /* Garage.m in Sources */ = {isa = PBXBuildFile; fileRef = 664DAB451479945F00C669D5 /* Garage.m */; };
 		668FA9631471A56300F1976D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 668FA9621471A56300F1976D /* Foundation.framework */; };
 		668FA9661471A56300F1976D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 668FA9651471A56300F1976D /* main.m */; };
 		668FA96A1471A56300F1976D /* Car_Parts.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 668FA9691471A56300F1976D /* Car_Parts.1 */; };
@@ -31,6 +32,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		664DAB441479945F00C669D5 /* Garage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Garage.h; sourceTree = "<group>"; };
+		664DAB451479945F00C669D5 /* Garage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Garage.m; sourceTree = "<group>"; };
 		668FA95E1471A56300F1976D /* Car Parts */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Car Parts"; sourceTree = BUILT_PRODUCTS_DIR; };
 		668FA9621471A56300F1976D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		668FA9651471A56300F1976D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -63,6 +66,8 @@
 		668FA9531471A56300F1976D = {
 			isa = PBXGroup;
 			children = (
+				664DAB441479945F00C669D5 /* Garage.h */,
+				664DAB451479945F00C669D5 /* Garage.m */,
 				66F46FE31472A7C500D7B28B /* AllWeatherRadial.h */,
 				66F46FE41472A7C500D7B28B /* AllWeatherRadial.m */,
 				66F46FE01472A76500D7B28B /* Slant6.h */,
@@ -170,6 +175,7 @@
 				66F46FDF1472A53000D7B28B /* Car.m in Sources */,
 				66F46FE21472A76500D7B28B /* Slant6.m in Sources */,
 				66F46FE51472A7C500D7B28B /* AllWeatherRadial.m in Sources */,
+				664DAB461479945F00C669D5 /* Garage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
