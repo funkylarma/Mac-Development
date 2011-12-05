@@ -7,3 +7,4 @@ Starting with basic C, moving onto Objective-C and Cocoa. Finally the frameworks
 * [Learn C on the Mac](http://www.apress.com/9781430218098)
 * [Learn Objective-C on the Mac](http://www.apress.com/9781430218159)
 * [Learn Cocoa on the Mac](http://www.apress.com/9781430218593)
+* [Objective-C Programming](http://www.bignerdranch.com/book/objective-c_programming_the_big_nerd_ranch_guide)
