@@ -1,0 +1,212 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		662FE760148EB82B0039109D /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 662FE75F148EB82B0039109D /* main.c */; };
+		662FE762148EB82B0039109D /* BeerSong.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 662FE761148EB82B0039109D /* BeerSong.1 */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		662FE759148EB82B0039109D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				662FE762148EB82B0039109D /* BeerSong.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		662FE75B148EB82B0039109D /* BeerSong */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = BeerSong; sourceTree = BUILT_PRODUCTS_DIR; };
+		662FE75F148EB82B0039109D /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		662FE761148EB82B0039109D /* BeerSong.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = BeerSong.1; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		662FE758148EB82B0039109D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		662FE750148EB82B0039109D = {
+			isa = PBXGroup;
+			children = (
+				662FE75E148EB82B0039109D /* BeerSong */,
+				662FE75C148EB82B0039109D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		662FE75C148EB82B0039109D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				662FE75B148EB82B0039109D /* BeerSong */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		662FE75E148EB82B0039109D /* BeerSong */ = {
+			isa = PBXGroup;
+			children = (
+				662FE75F148EB82B0039109D /* main.c */,
+				662FE761148EB82B0039109D /* BeerSong.1 */,
+			);
+			path = BeerSong;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		662FE75A148EB82B0039109D /* BeerSong */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 662FE765148EB82B0039109D /* Build configuration list for PBXNativeTarget "BeerSong" */;
+			buildPhases = (
+				662FE757148EB82B0039109D /* Sources */,
+				662FE758148EB82B0039109D /* Frameworks */,
+				662FE759148EB82B0039109D /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BeerSong;
+			productName = BeerSong;
+			productReference = 662FE75B148EB82B0039109D /* BeerSong */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		662FE752148EB82B0039109D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = "Stour Valley Designs";
+			};
+			buildConfigurationList = 662FE755148EB82B0039109D /* Build configuration list for PBXProject "BeerSong" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 662FE750148EB82B0039109D;
+			productRefGroup = 662FE75C148EB82B0039109D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				662FE75A148EB82B0039109D /* BeerSong */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		662FE757148EB82B0039109D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				662FE760148EB82B0039109D /* main.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		662FE763148EB82B0039109D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		662FE764148EB82B0039109D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		662FE766148EB82B0039109D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		662FE767148EB82B0039109D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		662FE755148EB82B0039109D /* Build configuration list for PBXProject "BeerSong" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				662FE763148EB82B0039109D /* Debug */,
+				662FE764148EB82B0039109D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		662FE765148EB82B0039109D /* Build configuration list for PBXNativeTarget "BeerSong" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				662FE766148EB82B0039109D /* Debug */,
+				662FE767148EB82B0039109D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 662FE752148EB82B0039109D /* Project object */;
+}
