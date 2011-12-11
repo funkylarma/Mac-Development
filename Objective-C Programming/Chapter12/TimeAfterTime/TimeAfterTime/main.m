@@ -13,14 +13,21 @@ int main (int argc, const char * argv[])
 
     @autoreleasepool {
         
+        NSDateComponents *comps = [[NSDateComponents alloc] init];
+        [comps setYear:1977];
+        [comps setMonth:10];
+        [comps setDay:27];
+        [comps setHour:10];
+        [comps setMinute:10];
+        [comps setSecond:10];
+        
+        NSCalendar *g = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+        NSDate *dateOfBirth = [g dateFromComponents:comps];
         NSDate *now = [NSDate date];
-        NSLog(@"The new date lives at %@", now);
         
-        double seconds = [now timeIntervalSince1970];
-        NSLog(@"It has been %f seconds since the start of 1970", seconds);
+        double secondsAlive = [now timeIntervalSinceDate:dateOfBirth];
+        NSLog(@"I have been alive for %f seconds", secondsAlive);
         
-        NSDate *later = [now dateByAddingTimeInterval:100000];
-        NSLog(@"In 100,000 seconds it will be %@", later);
         
     }
     return 0;
