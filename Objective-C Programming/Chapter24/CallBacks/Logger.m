@@ -15,6 +15,11 @@
     NSLog(@"Ouch");
 }
 
+-(void)zoneChange:(NSNotification *)note
+{
+    NSLog(@"The system time zone has changed");
+}
+
 //Called each time a chunk of data arrives
 -(void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
 {
