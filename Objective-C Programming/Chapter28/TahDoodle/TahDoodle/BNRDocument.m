@@ -39,6 +39,18 @@
     [self updateChangeCount:NSChangeDone];
 }
 
+- (IBAction)deleteItem:(id)sender
+{
+    if ([itemTableView selectedRow] != -1) {
+        [todoItems removeObjectAtIndex:[itemTableView selectedRow]];
+        [itemTableView reloadData];
+        [self updateChangeCount:NSChangeDone];
+    }
+    else {
+        NSLog(@"Nothing to delete");
+    }
+}
+
 #pragma mark - Data Source Methods
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tv
