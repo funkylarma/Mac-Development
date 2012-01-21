@@ -1,0 +1,308 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		66F727BE14CAC1AE00971D57 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66F727BD14CAC1AE00971D57 /* Cocoa.framework */; };
+		66F727C814CAC1AE00971D57 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 66F727C614CAC1AE00971D57 /* InfoPlist.strings */; };
+		66F727CA14CAC1AE00971D57 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 66F727C914CAC1AE00971D57 /* main.m */; };
+		66F727CE14CAC1AE00971D57 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 66F727CC14CAC1AE00971D57 /* Credits.rtf */; };
+		66F727D114CAC1AE00971D57 /* BNRDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 66F727D014CAC1AE00971D57 /* BNRDocument.m */; };
+		66F727D414CAC1AE00971D57 /* BNRDocument.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66F727D214CAC1AE00971D57 /* BNRDocument.xib */; };
+		66F727D714CAC1AF00971D57 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66F727D514CAC1AF00971D57 /* MainMenu.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		66F727B914CAC1AE00971D57 /* TahDoodle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TahDoodle.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		66F727BD14CAC1AE00971D57 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		66F727C014CAC1AE00971D57 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		66F727C114CAC1AE00971D57 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		66F727C214CAC1AE00971D57 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		66F727C514CAC1AE00971D57 /* TahDoodle-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TahDoodle-Info.plist"; sourceTree = "<group>"; };
+		66F727C714CAC1AE00971D57 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		66F727C914CAC1AE00971D57 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		66F727CB14CAC1AE00971D57 /* TahDoodle-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TahDoodle-Prefix.pch"; sourceTree = "<group>"; };
+		66F727CD14CAC1AE00971D57 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		66F727CF14CAC1AE00971D57 /* BNRDocument.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNRDocument.h; sourceTree = "<group>"; };
+		66F727D014CAC1AE00971D57 /* BNRDocument.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNRDocument.m; sourceTree = "<group>"; };
+		66F727D314CAC1AE00971D57 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/BNRDocument.xib; sourceTree = "<group>"; };
+		66F727D614CAC1AF00971D57 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		66F727B614CAC1AE00971D57 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66F727BE14CAC1AE00971D57 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		66F727AE14CAC1AE00971D57 = {
+			isa = PBXGroup;
+			children = (
+				66F727C314CAC1AE00971D57 /* TahDoodle */,
+				66F727BC14CAC1AE00971D57 /* Frameworks */,
+				66F727BA14CAC1AE00971D57 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		66F727BA14CAC1AE00971D57 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				66F727B914CAC1AE00971D57 /* TahDoodle.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		66F727BC14CAC1AE00971D57 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				66F727BD14CAC1AE00971D57 /* Cocoa.framework */,
+				66F727BF14CAC1AE00971D57 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		66F727BF14CAC1AE00971D57 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				66F727C014CAC1AE00971D57 /* AppKit.framework */,
+				66F727C114CAC1AE00971D57 /* CoreData.framework */,
+				66F727C214CAC1AE00971D57 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		66F727C314CAC1AE00971D57 /* TahDoodle */ = {
+			isa = PBXGroup;
+			children = (
+				66F727CF14CAC1AE00971D57 /* BNRDocument.h */,
+				66F727D014CAC1AE00971D57 /* BNRDocument.m */,
+				66F727D214CAC1AE00971D57 /* BNRDocument.xib */,
+				66F727D514CAC1AF00971D57 /* MainMenu.xib */,
+				66F727C414CAC1AE00971D57 /* Supporting Files */,
+			);
+			path = TahDoodle;
+			sourceTree = "<group>";
+		};
+		66F727C414CAC1AE00971D57 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				66F727C514CAC1AE00971D57 /* TahDoodle-Info.plist */,
+				66F727C614CAC1AE00971D57 /* InfoPlist.strings */,
+				66F727C914CAC1AE00971D57 /* main.m */,
+				66F727CB14CAC1AE00971D57 /* TahDoodle-Prefix.pch */,
+				66F727CC14CAC1AE00971D57 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		66F727B814CAC1AE00971D57 /* TahDoodle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66F727DA14CAC1AF00971D57 /* Build configuration list for PBXNativeTarget "TahDoodle" */;
+			buildPhases = (
+				66F727B514CAC1AE00971D57 /* Sources */,
+				66F727B614CAC1AE00971D57 /* Frameworks */,
+				66F727B714CAC1AE00971D57 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TahDoodle;
+			productName = TahDoodle;
+			productReference = 66F727B914CAC1AE00971D57 /* TahDoodle.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		66F727B014CAC1AE00971D57 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = "Stour Valley Designs";
+			};
+			buildConfigurationList = 66F727B314CAC1AE00971D57 /* Build configuration list for PBXProject "TahDoodle" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 66F727AE14CAC1AE00971D57;
+			productRefGroup = 66F727BA14CAC1AE00971D57 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				66F727B814CAC1AE00971D57 /* TahDoodle */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		66F727B714CAC1AE00971D57 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66F727C814CAC1AE00971D57 /* InfoPlist.strings in Resources */,
+				66F727CE14CAC1AE00971D57 /* Credits.rtf in Resources */,
+				66F727D414CAC1AE00971D57 /* BNRDocument.xib in Resources */,
+				66F727D714CAC1AF00971D57 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		66F727B514CAC1AE00971D57 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66F727CA14CAC1AE00971D57 /* main.m in Sources */,
+				66F727D114CAC1AE00971D57 /* BNRDocument.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		66F727C614CAC1AE00971D57 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				66F727C714CAC1AE00971D57 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		66F727CC14CAC1AE00971D57 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				66F727CD14CAC1AE00971D57 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		66F727D214CAC1AE00971D57 /* BNRDocument.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				66F727D314CAC1AE00971D57 /* en */,
+			);
+			name = BNRDocument.xib;
+			sourceTree = "<group>";
+		};
+		66F727D514CAC1AF00971D57 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				66F727D614CAC1AF00971D57 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		66F727D814CAC1AF00971D57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		66F727D914CAC1AF00971D57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		66F727DB14CAC1AF00971D57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TahDoodle/TahDoodle-Prefix.pch";
+				INFOPLIST_FILE = "TahDoodle/TahDoodle-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		66F727DC14CAC1AF00971D57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TahDoodle/TahDoodle-Prefix.pch";
+				INFOPLIST_FILE = "TahDoodle/TahDoodle-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		66F727B314CAC1AE00971D57 /* Build configuration list for PBXProject "TahDoodle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66F727D814CAC1AF00971D57 /* Debug */,
+				66F727D914CAC1AF00971D57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		66F727DA14CAC1AF00971D57 /* Build configuration list for PBXNativeTarget "TahDoodle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66F727DB14CAC1AF00971D57 /* Debug */,
+				66F727DC14CAC1AF00971D57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 66F727B014CAC1AE00971D57 /* Project object */;
+}
