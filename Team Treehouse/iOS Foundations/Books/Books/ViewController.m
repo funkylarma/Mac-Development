@@ -21,47 +21,29 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-    NSString *bookTitle = @"Brave new world!";
-    NSLog(@"%p - %@", bookTitle, bookTitle);
+	
+    NSArray *bookTitles = [NSArray arrayWithObjects:@"Brave new world", @"Call of the wild", @"Catch-22", @"Atlas Shrugged", nil];
     
-    NSString *bookTitle2 = bookTitle;
-    NSLog(@"%p - %@", bookTitle2, bookTitle2);
+    NSLog(@"%@", bookTitles);
     
-    bookTitle2 = @"Catch 22";
-    NSLog(@"%p - %@", bookTitle2, bookTitle2);
+    [bookTitles count];
+    NSString *string = [bookTitles objectAtIndex:3];
+    NSLog(@"%@", string);
     
-    NSString *bookAuthor = @"Aldous Huxley";
-    int datePublished = 1932;
+    int index = [bookTitles indexOfObject:@"Catch-22"];
+    NSLog(@"Index of Catch-22: %i", index);
     
-    NSString *book = [NSString stringWithFormat:@"%@ by %@ date published: %i", bookTitle, bookAuthor, datePublished];
+    BOOL ret = [bookTitles containsObject:@"Catch-22"];
+    NSLog(@"Index of Catch-22: %i", ret);
     
-    NSLog(@"%@", book);
+    id temp = [bookTitles lastObject];
+    NSLog(@"%@", temp);
     
-    // Substring function
-    NSLog(@"%@", [book substringToIndex:5]);
+    NSMutableArray *booksMutable = [NSMutableArray arrayWithCapacity:0];
     
-    // Substring function
-    NSLog(@"%@", [book substringFromIndex:6]);
-    
-    // Range takes two arguments the starting index and the length
-    NSLog(@"%@", [book substringWithRange: NSMakeRange(6, 3)]);
-    
-    book = [book stringByReplacingOccurrencesOfString:@" " withString:@"!"];
-    NSLog(@"%@", book);
-    
-    if ([bookTitle isEqualToString:@"Brave new world!"]) {
-        NSLog(@"They are the same");
-    }
-    
-    NSMutableString *bookMutable = [NSMutableString stringWithString:bookTitle];
-    
-    NSLog(@"%p - %@", bookMutable, bookMutable);
-    
-    [bookMutable appendString:bookAuthor];
-    NSLog(@"%p - %@", bookMutable, bookMutable);
-
-    
+    [booksMutable addObject:@"Brave new world"];
+    [booksMutable insertObject:@"Call of the wild" atIndex:0];
+    NSLog(@"%@", booksMutable);
 }
 
 - (void)viewDidUnload
