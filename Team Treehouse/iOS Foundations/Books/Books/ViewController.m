@@ -22,28 +22,25 @@
 {
     [super viewDidLoad];
 	
-    NSArray *bookTitles = [NSArray arrayWithObjects:@"Brave new world", @"Call of the wild", @"Catch-22", @"Atlas Shrugged", nil];
+    NSString *bookTitle = @"Brave new world";
+    NSString *bookAuthor = @"Aldous Huxley";
+    int datePublished = 1932;
     
-    NSLog(@"%@", bookTitles);
+    //NSString *book = [NSString stringWithFormat:@"%@ - %@, %i", bookTitle, bookAuthor, datePublished];
     
-    [bookTitles count];
-    NSString *string = [bookTitles objectAtIndex:3];
-    NSLog(@"%@", string);
+    NSDictionary *book1 = [NSDictionary dictionaryWithObjectsAndKeys:bookTitle,@"title",bookAuthor,@"author",[NSNumber numberWithInt:datePublished],@"datePublished", nil];
     
-    int index = [bookTitles indexOfObject:@"Catch-22"];
-    NSLog(@"Index of Catch-22: %i", index);
+    NSLog(@"%@", book1);
+    NSLog(@"%@", [book1 objectForKey:@"title"]);
+    NSLog(@"%@", [book1 objectForKey:@"author"]);
+    NSLog(@"%i", [[book1 objectForKey:@"datePublished"] intValue]);
     
-    BOOL ret = [bookTitles containsObject:@"Catch-22"];
-    NSLog(@"Index of Catch-22: %i", ret);
+    NSMutableDictionary *bookMutable = [NSMutableDictionary dictionaryWithCapacity:0];
     
-    id temp = [bookTitles lastObject];
-    NSLog(@"%@", temp);
-    
-    NSMutableArray *booksMutable = [NSMutableArray arrayWithCapacity:0];
-    
-    [booksMutable addObject:@"Brave new world"];
-    [booksMutable insertObject:@"Call of the wild" atIndex:0];
-    NSLog(@"%@", booksMutable);
+    [bookMutable setValue:bookTitle forKey:@"title"];
+    [bookMutable setValue:bookAuthor forKey:@"author"];
+    [bookMutable setValue:[NSNumber numberWithInt:datePublished] forKey:@"datePublished"];
+    NSLog(@"%@", bookMutable);
 }
 
 - (void)viewDidUnload
