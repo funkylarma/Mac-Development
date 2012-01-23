@@ -58,7 +58,7 @@
 {
     NSDateFormatter *df = [[NSDateFormatter alloc] init];
     [df setTimeStyle:NSDateFormatterNoStyle];
-    [df setDateStyle:NSDateFormatterMediumStyle];
+    [df setDateStyle:NSDateFormatterLongStyle];
     NSString *result = [[NSString alloc] initWithFormat:@"%@ = %d and %d", 
               [df stringFromDate:entryDate],
               firstNumber,
