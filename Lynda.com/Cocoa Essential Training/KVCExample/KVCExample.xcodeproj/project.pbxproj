@@ -1,0 +1,306 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6696FA8015D1AF7800B5E30E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6696FA7F15D1AF7800B5E30E /* Cocoa.framework */; };
+		6696FA8A15D1AF7800B5E30E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6696FA8815D1AF7800B5E30E /* InfoPlist.strings */; };
+		6696FA8C15D1AF7900B5E30E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6696FA8B15D1AF7800B5E30E /* main.m */; };
+		6696FA9015D1AF7900B5E30E /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 6696FA8E15D1AF7900B5E30E /* Credits.rtf */; };
+		6696FA9315D1AF7900B5E30E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6696FA9215D1AF7900B5E30E /* AppDelegate.m */; };
+		6696FA9615D1AF7900B5E30E /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6696FA9415D1AF7900B5E30E /* MainMenu.xib */; };
+		6696FA9E15D1AFA900B5E30E /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = 6696FA9D15D1AFA900B5E30E /* Book.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		6696FA7B15D1AF7800B5E30E /* KVCExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KVCExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6696FA7F15D1AF7800B5E30E /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		6696FA8215D1AF7800B5E30E /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		6696FA8315D1AF7800B5E30E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		6696FA8415D1AF7800B5E30E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6696FA8715D1AF7800B5E30E /* KVCExample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KVCExample-Info.plist"; sourceTree = "<group>"; };
+		6696FA8915D1AF7800B5E30E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6696FA8B15D1AF7800B5E30E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6696FA8D15D1AF7900B5E30E /* KVCExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KVCExample-Prefix.pch"; sourceTree = "<group>"; };
+		6696FA8F15D1AF7900B5E30E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		6696FA9115D1AF7900B5E30E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6696FA9215D1AF7900B5E30E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6696FA9515D1AF7900B5E30E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		6696FA9C15D1AFA900B5E30E /* Book.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Book.h; sourceTree = "<group>"; };
+		6696FA9D15D1AFA900B5E30E /* Book.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Book.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6696FA7815D1AF7800B5E30E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6696FA8015D1AF7800B5E30E /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6696FA7015D1AF7800B5E30E = {
+			isa = PBXGroup;
+			children = (
+				6696FA8515D1AF7800B5E30E /* KVCExample */,
+				6696FA7E15D1AF7800B5E30E /* Frameworks */,
+				6696FA7C15D1AF7800B5E30E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6696FA7C15D1AF7800B5E30E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6696FA7B15D1AF7800B5E30E /* KVCExample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6696FA7E15D1AF7800B5E30E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6696FA7F15D1AF7800B5E30E /* Cocoa.framework */,
+				6696FA8115D1AF7800B5E30E /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6696FA8115D1AF7800B5E30E /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6696FA8215D1AF7800B5E30E /* AppKit.framework */,
+				6696FA8315D1AF7800B5E30E /* CoreData.framework */,
+				6696FA8415D1AF7800B5E30E /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		6696FA8515D1AF7800B5E30E /* KVCExample */ = {
+			isa = PBXGroup;
+			children = (
+				6696FA9115D1AF7900B5E30E /* AppDelegate.h */,
+				6696FA9215D1AF7900B5E30E /* AppDelegate.m */,
+				6696FA9415D1AF7900B5E30E /* MainMenu.xib */,
+				6696FA9C15D1AFA900B5E30E /* Book.h */,
+				6696FA9D15D1AFA900B5E30E /* Book.m */,
+				6696FA8615D1AF7800B5E30E /* Supporting Files */,
+			);
+			path = KVCExample;
+			sourceTree = "<group>";
+		};
+		6696FA8615D1AF7800B5E30E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6696FA8715D1AF7800B5E30E /* KVCExample-Info.plist */,
+				6696FA8815D1AF7800B5E30E /* InfoPlist.strings */,
+				6696FA8B15D1AF7800B5E30E /* main.m */,
+				6696FA8D15D1AF7900B5E30E /* KVCExample-Prefix.pch */,
+				6696FA8E15D1AF7900B5E30E /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6696FA7A15D1AF7800B5E30E /* KVCExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6696FA9915D1AF7900B5E30E /* Build configuration list for PBXNativeTarget "KVCExample" */;
+			buildPhases = (
+				6696FA7715D1AF7800B5E30E /* Sources */,
+				6696FA7815D1AF7800B5E30E /* Frameworks */,
+				6696FA7915D1AF7800B5E30E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KVCExample;
+			productName = KVCExample;
+			productReference = 6696FA7B15D1AF7800B5E30E /* KVCExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6696FA7215D1AF7800B5E30E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = "Stour Valley Designs";
+			};
+			buildConfigurationList = 6696FA7515D1AF7800B5E30E /* Build configuration list for PBXProject "KVCExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6696FA7015D1AF7800B5E30E;
+			productRefGroup = 6696FA7C15D1AF7800B5E30E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6696FA7A15D1AF7800B5E30E /* KVCExample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6696FA7915D1AF7800B5E30E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6696FA8A15D1AF7800B5E30E /* InfoPlist.strings in Resources */,
+				6696FA9015D1AF7900B5E30E /* Credits.rtf in Resources */,
+				6696FA9615D1AF7900B5E30E /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6696FA7715D1AF7800B5E30E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6696FA8C15D1AF7900B5E30E /* main.m in Sources */,
+				6696FA9315D1AF7900B5E30E /* AppDelegate.m in Sources */,
+				6696FA9E15D1AFA900B5E30E /* Book.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		6696FA8815D1AF7800B5E30E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6696FA8915D1AF7800B5E30E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		6696FA8E15D1AF7900B5E30E /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6696FA8F15D1AF7900B5E30E /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		6696FA9415D1AF7900B5E30E /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6696FA9515D1AF7900B5E30E /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6696FA9715D1AF7900B5E30E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		6696FA9815D1AF7900B5E30E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		6696FA9A15D1AF7900B5E30E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KVCExample/KVCExample-Prefix.pch";
+				INFOPLIST_FILE = "KVCExample/KVCExample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		6696FA9B15D1AF7900B5E30E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KVCExample/KVCExample-Prefix.pch";
+				INFOPLIST_FILE = "KVCExample/KVCExample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6696FA7515D1AF7800B5E30E /* Build configuration list for PBXProject "KVCExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6696FA9715D1AF7900B5E30E /* Debug */,
+				6696FA9815D1AF7900B5E30E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6696FA9915D1AF7900B5E30E /* Build configuration list for PBXNativeTarget "KVCExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6696FA9A15D1AF7900B5E30E /* Debug */,
+				6696FA9B15D1AF7900B5E30E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6696FA7215D1AF7800B5E30E /* Project object */;
+}
