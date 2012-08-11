@@ -14,3 +14,4 @@ Starting with basic C, moving onto Objective-C and Cocoa. Finally the frameworks
 * [iOS 4 Foundations - Tree House](http://teamtreehouse.com/library/ios-development/ios-4-foundations)
 * [Objective-C Essential Training - Lynda.com](http://www.lynda.com/Xcode-4-tutorials/Objective-C-Essential-Training/77860-2.html)
 * [Cocoa Essential Training - Lynda.com](http://www.lynda.com/Mac-OS-X-tutorials/Cocoa-Essential-Training/85872-2.html)
+* [iOS Essential Training - Lynda.com](http://www.lynda.com/iOS-tutorials/iOS-SDK-Essential-Training/92179-2.html)
