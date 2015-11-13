@@ -54,6 +54,40 @@ class Particle {
   
 }
 
+// MARK: - Class Declarations
+class Rocket:Particle {
+  
+  let thrust:Double
+  var thrustRemaining:NSTimeInterval
+  let direction = Vector(x: 0, y: 1)
+  
+  // MARK: - Class Initialisers
+  init(position:Vector, thrust:Double, thrustTime:NSTimeInterval) {
+    self.thrust = thrust
+    self.thrustRemaining = thrustTime
+    super.init(position:position)
+  }
+  
+  convenience init(thrust:Double, thrustTime:NSTimeInterval) {
+    self.init(position: Vector(), thrust: thrust, thrustTime: thrustTime)
+  }
+  
+  // MARK: - Instance Methods
+  override func tick(dt: NSTimeInterval) {
+    if thrustRemaining > 0.0 {
+      let thrustTime = min(dt, thrustRemaining)
+      let thrustToApply = thrust * thrustTime
+      let thrustForce = direction * thrustToApply
+      acceleration = acceleration + thrustForce
+      thrustRemaining -= thrustTime
+    }
+    super.tick(dt)
+  }
+  
+  
+}
+
+// MARK: - Class Declarations
 class Simulation {
   
   // MARK: - Class Properties
@@ -102,7 +136,10 @@ let simulation = Simulation()
 
 let ball = Particle()
 ball.acceleration = Vector(x: 0, y: 100)
-simulation.addParticle(ball)
+//simulation.addParticle(ball)
+
+let rocket = Rocket(thrust: 10.0, thrustTime: 60.0)
+simulation.addParticle(rocket)
 
 while simulation.particles.count > 0 && simulation.time < 500 {
   simulation.tick(1.0)
