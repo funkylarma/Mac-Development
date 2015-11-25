@@ -3,11 +3,20 @@
 import Cocoa
 
 // MARK: - Structure Declarations
-struct Vector {
+struct Vector:CustomStringConvertible {
   
   // MARK: - Structure Properties
   var x:Double
   var y:Double
+  var length:Double {
+    return sqrt(x * x + y * y)
+  }
+  var angle:Double {
+    return atan2(y, x)
+  }
+  var description:String {
+    return "(\(x), \(y))"
+  }
   
   // MARK: - Structure Initialisers
   init() {
@@ -84,7 +93,6 @@ class Rocket:Particle {
     super.tick(dt)
   }
   
-  
 }
 
 // MARK: - Class Declarations
@@ -144,3 +152,13 @@ simulation.addParticle(rocket)
 while simulation.particles.count > 0 && simulation.time < 500 {
   simulation.tick(1.0)
 }
+
+var vector0 = Vector(x: 0, y: 0)
+var vector1 = vector0
+vector0.x = 1
+
+let ball0 = Particle()
+let ball1 = ball0
+ball0.position.x = 1
+
+print("Gravity is \(gravity)")
