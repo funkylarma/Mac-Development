@@ -8,11 +8,19 @@
 
 import Cocoa
 
-class MainWindowController: NSWindowController {
+class MainWindowController: NSWindowController, NSSpeechSynthesizerDelegate, NSWindowDelegate {
   
   @IBOutlet weak var textField: NSTextField!
   @IBOutlet weak var speakButton: NSButton!
   @IBOutlet weak var stopButton: NSButton!
+  
+  let speechSynth = NSSpeechSynthesizer()
+  
+  var isStarted: Bool = false {
+    didSet {
+      updateButtons()
+    }
+  }
   
   override var windowNibName: String {
     return "MainWindowController"
@@ -20,8 +28,8 @@ class MainWindowController: NSWindowController {
 
   override func windowDidLoad() {
     super.windowDidLoad()
-
-    // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
+    speechSynth.delegate = self
+    updateButtons()
   }
   
   // MARK: - Action methods
@@ -34,11 +42,42 @@ class MainWindowController: NSWindowController {
       print("string from \(textField) is empty")
     } else {
       print("string is \"\(textField.stringValue)\"")
+      speechSynth.startSpeakingString(string)
+      isStarted = true
     }
   }
     
   @IBAction func stopIt(sender: NSButton) {
     print("stop button clicked")
+    speechSynth.stopSpeaking()
+    isStarted = false
+  }
+  
+  // MARK: - Instance methods
+  
+  func updateButtons() {
+    
+    if isStarted {
+      speakButton.enabled = false
+      stopButton.enabled = true
+    } else {
+      speakButton.enabled = true
+      stopButton.enabled = false
+    }
+  }
+  
+  // MARK: - NSSpeechSynthesizerDelegate methods
+  
+  func speechSynthesizer(sender: NSSpeechSynthesizer, didFinishSpeaking finishedSpeaking: Bool) {
+    
+    isStarted = false
+    print("finishedSpeaking=\(finishedSpeaking)")
+  }
+  
+  // MARK: - NSWindowDelegate methods
+  
+  func windowShouldClose(sender: AnyObject) -> Bool {
+    return !isStarted
   }
 
 }
