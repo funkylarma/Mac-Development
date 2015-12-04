@@ -8,9 +8,22 @@
 
 import Cocoa
 
+private var KVOContext: Int = 0
+
 class Document: NSDocument {
   
-  var employees: [Employee] = []
+  var employees: [Employee] = [] {
+    willSet {
+      for employee in employees {
+        stopObservingEmployee(employee)
+      }
+    }
+    didSet {
+      for employee in employees {
+        startObservingEmployee(employee)
+      }
+    }
+  }
 
   override init() {
       super.init()
@@ -44,7 +57,51 @@ class Document: NSDocument {
     // If you override either of these, you should also override -isEntireFileLoaded to return false if the contents are lazily loaded.
     throw NSError(domain: NSOSStatusErrorDomain, code: unimpErr, userInfo: nil)
   }
+  
+  // MARK: - Accessors
+  
+  func insertObject(employee: Employee, inEmployeesAtIndex index: Int) {
+    print("adding \(employee) to the employees array")
+    
+    // Add the nverse of this operation to the undo stack
+    let undo: NSUndoManager = undoManager!
+    undo.prepareWithInvocationTarget(self).removeObjectFromEmployeesAtIndex(employees.count)
+    
+    if !undo.undoing {
+      undo.setActionName("Add Person")
+    }
+    
+    employees.append(employee)
+    
+  }
+  
+  func removeObjectFromEmployeesAtIndex(index: Int) {
+    let employee: Employee = employees[index]
+    
+    print("removing \(employee) from the employees array")
+    
+    // Add the inverse of this operation to the undo stack
+    let undo: NSUndoManager = undoManager!
+    undo.prepareWithInvocationTarget(self).insertObject(employee, inEmployeesAtIndex: index)
+    
+    if !undo.undoing {
+      undo.setActionName("Remove Person")
+    }
+    
+    // Remove the Employee from the array
+    employees.removeAtIndex(index)
+  }
 
-
+  // MARK: - Key Value Observing
+  
+  func startObservingEmployee(employee: Employee) {
+    employee.addObserver(self, forKeyPath: "name", options: .Old, context: &KVOContext)
+    employee.addObserver(self, forKeyPath: "raise", options: .Old, context: &KVOContext)
+  }
+  
+  func stopObservingEmployee(employee: Employee) {
+    employee.removeObserver(self, forKeyPath: "name", context: &KVOContext)
+    employee.removeObserver(self, forKeyPath: "raise", context: &KVOContext)
+  }
 }
 
