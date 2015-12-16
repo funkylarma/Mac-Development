@@ -6,3 +6,6 @@ var str = "Hello, playground"
 
 str += "!"
 print(str)
+
+var name = "Chamberlin"
+print(name)
